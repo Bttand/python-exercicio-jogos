@@ -7,9 +7,9 @@ f = '_'
 g = ' '
 h = ' '
 i = ' '
-vica = False
-vicb = False
-draw = False
+vitoriaA = False
+vitoriaB = False
+empate = False
 validA = False
 validB = False
 A1 = False
@@ -40,7 +40,7 @@ print('Essas são as posições:\n')
 print('_1_|_2_|_3_')
 print('_4_|_5_|_6_')
 print(' 7 | 8 | 9 \n')
-while vica == False and vicb == False and draw == False:
+while vitoriaA == False and vitoriaB == False and empate == False:
     while validA == False:    
         while True:
             try:
@@ -93,31 +93,31 @@ while vica == False and vicb == False and draw == False:
     print('_' + d + '_|_' + e + '_|_' + f + '_')
     print(' ' + g + ' | ' + h + ' | ' + i + ' \n')
     if A1 == True and A2 == True and A3 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A4 == True and A5 == True and A6 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A7 == True and A8 == True and A9 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A1 == True and A4 == True and A7 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A2 == True and A5 == True and A8 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A3 == True and A6 == True and A9 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A1 == True and A5 == True and A9 == True:
-        vica = True
+        vitoriaA = True
         break
     elif A3 == True and A5 == True and A7 == True:
-        vica = True
+        vitoriaA = True
         break
     elif (A1 == True or B1 == True) and (A2 == True or B2 == True) and (A3 == True or B3 == True) and (A4 == True or B4 == True) and (A5 == True or B5 == True) and (A6 == True or B6 == True) and (A7 == True or B7 == True) and (A8 == True or B8 == True) and (A9 == True or B9 == True):
-        draw = True
+        empate = True
         break
     print('\n')
     validA = False
@@ -173,27 +173,27 @@ while vica == False and vicb == False and draw == False:
     print('_' + d + '_|_' + e + '_|_' + f + '_')
     print(' ' + g + ' | ' + h + ' | ' + i + ' \n')
     if B1 == True and B2 == True and B3 == True:
-        vicb = True
+        vitoriaB = True
     elif B4 == True and B5 == True and B6 == True:
-        vicb = True
+        vitoriaB = True
     elif B7 == True and B8 == True and B9 == True:
-        vicb = True
+        vitoriaB = True
     elif B1 == True and B4 == True and B7 == True:
-        vicb = True
+        vitoriaB = True
     elif B2 == True and B5 == True and B8 == True:
-        vicb = True
+        vitoriaB = True
     elif B3 == True and B6 == True and B9 == True:
-        vicb = True
+        vitoriaB = True
     elif B1 == True and B5 == True and B9 == True:
-        vicb = True
+        vitoriaB = True
     elif B3 == True and B5 == True and B7 == True:
-        vicb = True
+        vitoriaB = True
     validB = False
-if vica == True:
+if vitoriaA == True:
     print('Vencedor: Jogador A')
-elif vicb == True:
+elif vitoriaB == True:
     print('Vencedor: Jogador B')
-elif draw == True:
+elif empate == True:
     print('Empate')
 input()     
         

@@ -18,24 +18,24 @@ C3 = False
 C4 = False
 C5 = False
 C6 = False
-vic = False
-list = [a, b, c]
-hx = random.choice(list)
+vitoria = False
+lista = [a, b, c]
+escolha = random.choice(lista)
 
 print('Bem-vindo ao Caça Palavras\n\nUm quadro com letras aleatórias foi escolhido para você com um número x de palavras escondidas\n\nBoa sorte para encontra-las\n')
-for n in hx:
-    print(hx[i], end = ' ')
+for n in escolha:
+    print(escolha[i], end = ' ')
     i = i + 1
-if hx == a:
-    xp = 5
-if hx == b:
-    xp = 4
-if hx == c:
-    xp = 6
+if escolha == a:
+    quanplv = 5
+if escolha == b:
+    quanplv = 4
+if escolha == c:
+    quanplv = 6
 print('\n')
-print('Existem ' + str(xp) + ' palavras\n')
-while vic == False:
-    if hx == a:
+print('Existem ' + str(quanplv) + ' palavras\n')
+while vitoria == False:
+    if escolha == a:
         try:
             tnt = str(input('Achou alguma palavra? '))
             if tnt == ('coisa'): 
@@ -73,8 +73,8 @@ while vic == False:
         except:
             print('Errado')
     if A1 == True and A2 == True and A3 == True and A4 == True and A5 == True:
-        vic = True
-    if hx == b:
+        vitoria = True
+    if escolha == b:
         try:
             tnt = str(input('Achou alguma palavra? '))
             if tnt == ('arara'): 
@@ -106,8 +106,8 @@ while vic == False:
         except:
             print('Errado')
     if B1 == True and B2 == True and B3 == True and B4 == True:
-        vic = True
-    if hx == c:
+        vitoria = True
+    if escolha == c:
         try:
             tnt = str(input('Achou alguma palavra? '))
             if tnt == ('moradia'): 
@@ -151,7 +151,7 @@ while vic == False:
         except:
             print('Errado')
     if C1 == True and C2 == True and C3 == True and C4 == True and C5 == True and C3 == True:
-        vic = True          
-if vic == True:
+        vitoria = True          
+if vitoria == True:
     print('VITÓRIA')
 input()

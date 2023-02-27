@@ -1,6 +1,6 @@
 import random
-plv = ['abacaxi', 'ortodoxo', 'corno', 'boi', 'celular', 'burro', 'vaca', 'bola', 'relativo', 'mae', 'coito', 'pipa', 'pao', 'utopia', 'sexo', 'alduterio', 'fofa', 'tigre', 'legado', 'roxo', 'prato', 'democracia', 'nostalgia', 'divergente', 'lealdade', 'relevancia']
-alf = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+lista = ['abacaxi', 'ortodoxo', 'corno', 'boi', 'celular', 'burro', 'vaca', 'bola', 'relativo', 'mae', 'coito', 'pipa', 'pao', 'utopia', 'sexo', 'adulterio', 'fofa', 'tigre', 'legado', 'roxo', 'prato', 'democracia', 'nostalgia', 'divergente', 'lealdade', 'relevancia']
+alfabeto = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 Aa = ' '
 Bb = ' '
 Cc = ' '
@@ -11,152 +11,146 @@ Gg = ' '
 Hh = ' '
 Ii = ' '
 Jj = ' '
-vic = False
-df = False
-tv = False
-dfp = 0
-n = random.choice(plv)
-nt = len(n)
+vitoria = False
+derrota = False
+teste = False
+tentativas = 0
+palavra = random.choice(lista)
+plvalor = len(palavra)
 
-if n[0] in alf:
-    a = n[0]
-if n[1] in alf:
-    b = n[1]
-if n[2] in alf:
-    c = n[2]
+a = palavra[0]
+b = palavra[1]
+c = palavra[2]
 try:
-    if n[3] in alf:
-        d = n[3]
+    if palavra[3] in alfabeto:
+        d = palavra[3]
 except:
     d = (' ')
 try:
-    if n[4] in alf:
-        e = n[4]
+    if palavra[4] in alfabeto:
+        e = palavra[4]
 except:
     e = (' ')
 try:
-    if n[5] in alf:
-        f = n[5]
+    if palavra[5] in alfabeto:
+        f = palavra[5]
 except:
     f = (' ')
 try:
-    if n[6] in alf:
-        g = n[6]
+    if palavra[6] in alfabeto:
+        g = palavra[6]
 except:
     g = (' ')
 try:
-    if n[7] in alf:
-        h = n[7]
+    if palavra[7] in alfabeto:
+        h = palavra[7]
 except:
     h = (' ')
 try:
-    if n[8] in alf:
-        i = n[8]
+    if palavra[8] in alfabeto:
+        i = palavra[8]
 except:
     i = (' ')
 try:
-    if n[9] in alf:
-        j = n[9]
+    if palavra[9] in alfabeto:
+        j = palavra[9]
 except:
     j = (' ')
-if n[0] in alf:
-    Aa = '_'
-if n[1] in alf:
-    Bb = '_'
-if n[2] in alf:
-    Cc = '_'
+Aa = '_'
+Bb = '_'
+Cc = '_'
 try:
-    if n[3] in alf:
+    if palavra[3] in alfabeto:
         Dd = '_'
 except:
     Dd = (' ')
 try:
-    if n[4] in alf:
+    if palavra[4] in alfabeto:
         Ee = '_'
 except:
     Ee = (' ')
 try:
-    if n[5] in alf:
+    if palavra[5] in alfabeto:
         Ff = '_'
 except:
     Ff = (' ')
 try:
-    if n[6] in alf:
+    if palavra[6] in alfabeto:
         Gg = '_'
 except:
     Gg = (' ')
 try:
-    if n[7] in alf:
+    if palavra[7] in alfabeto:
         Hh = '_'
 except:
     Hh = (' ')
 try:
-    if n[8] in alf:
+    if palavra[8] in alfabeto:
         Ii = '_'
 except:
     Ii = (' ')
 try:
-    if n[9] in alf:
+    if palavra[9] in alfabeto:
         Jj = '_'
 except:
     Jj = (' ')
 print('Bem-vindo ao jogo da Forca\n')
 print('Uma palavra com 10 letras ou menos será selecionada\n')
 print('Você terá um máximo de 6 chances para acertar\n')
-for nb in range(nt):
+for nb in range(plvalor):
     print('_', end = ' ')
 print('\n')
-print('A palavra tem ' + str(nt) + ' letras\n')
-while vic == False and df == False:
-    while tv == False:
+print('A palavra tem ' + str(plvalor) + ' letras')
+while vitoria == False and derrota == False:
+    while teste == False:
         print('\n')
-        es = input('Escolha uma letra: \n')
-        if es in alf:
-            tv = True
-    tv = False
-    if es == a:
+        letra = input('Escolha uma letra: \n')
+        if letra in alfabeto:
+            teste = True
+    teste = False
+    if letra == a:
         Aa = a
-    if es == b:
+    if letra == b:
         Bb = b
-    if es == c:
+    if letra == c:
         Cc = c
-    if es == d:
+    if letra == d:
         Dd = d
-    if es == e:
+    if letra == e:
         Ee = e
-    if es == f:
+    if letra == f:
         Ff = f
-    if es == g:
+    if letra == g:
         Gg = g
-    if es == h:
+    if letra == h:
         Hh = h
-    if es == i:
+    if letra == i:
         Ii = i
-    if es == j:
+    if letra == j:
         Jj = j
-    if es not in n:
-        dfp = dfp + 1
+    if letra not in palavra:
+        tentativas = tentativas + 1
     print(Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj)
     print('\n')
-    if dfp >= 1:
+    if tentativas >= 1:
         print('  O  ')
-    if dfp == 2:
+    if tentativas == 2:
         print('  |  ')
-    if dfp == 3:
+    if tentativas == 3:
         print(' /|  ')
-    if dfp >= 4:
+    if tentativas >= 4:
         print(' /|\ ')
-    if dfp == 5:
+    if tentativas == 5:
         print(' /   ')
-    if dfp == 6:
+    if tentativas == 6:
         print(' / \ ')   
     if (Aa == a) and (Bb == b) and (Cc == c) and (Dd == d) and (Ee == e) and (Ff == f) and (Gg == g) and (Hh == h) and (Ii == i) and ( Jj == j):
-        vic = True
-    if dfp == 6:
-        df = True
+        vitoria = True
+    if tentativas == 6:
+        derrota = True
 print('\n')
-if vic == True:
+if vitoria == True:
     print('VITÓRIA')
-if df == True:
+if derrota == True:
     print('FORCA')
 input()
