@@ -11,6 +11,8 @@ Gg = ' '
 Hh = ' '
 Ii = ' '
 Jj = ' '
+erro = ["_", "_", "_", "_", "_"]
+x = 0
 vitoria = False
 derrota = False
 teste = False
@@ -104,9 +106,10 @@ print('A palavra tem ' + str(plvalor) + ' letras')
 while vitoria == False and derrota == False:
     while teste == False:
         print('\n')
-        letra = input('Escolha uma letra: \n')
+        letra = input('Escolha uma letra' + ' [Erros: ' + erro[0] + erro[1] + erro[2] + erro[3] + erro[4] + "]\n")
         if letra in alfabeto:
-            teste = True
+            if letra not in erro:
+                teste = True
     teste = False
     if letra == a:
         Aa = a
@@ -130,6 +133,8 @@ while vitoria == False and derrota == False:
         Jj = j
     if letra not in palavra:
         tentativas = tentativas + 1
+        erro[x] = letra
+        x = x + 1
     print(Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj)
     print('\n')
     if tentativas >= 1:
